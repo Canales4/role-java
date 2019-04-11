@@ -38,7 +38,7 @@ galaxy_info:
   platforms:
    - name: Ubuntu
      versions:
-     - bionic(18.10)
+     - cosmic
   # - name: SomePlatform
   #   versions:
   #   - all
