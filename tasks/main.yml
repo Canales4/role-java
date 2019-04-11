@@ -1,4 +1,3 @@
 ---
-# tasks file for /etc/ansible/roles/role-java
 - import_tasks: java-repository.yml
 - import_tasks: java-install.yml
