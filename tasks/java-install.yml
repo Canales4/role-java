@@ -5,6 +5,3 @@
     - oracle-java8-installer
     - ca-certificates
     - oracle-java8-set-default
-- name: actualizando apt package cache
-  become: yes
-  action: apt update_cache=yes
