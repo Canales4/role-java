@@ -46,7 +46,7 @@ galaxy_info:
   #   - 7
   #   - 99.99
 
-  galaxy_tags: []
+  galaxy_tags:
     - java
     - development
     - ubuntu
