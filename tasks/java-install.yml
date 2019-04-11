@@ -1,6 +1,6 @@
 - name: Instalacion Java 8
   become: yes
-  apt: name={{item}}  state=latest
+  apt: name = {{ item }}  state=latest
   with_items:
     - oracle-java8-installer
     - ca-certificates
