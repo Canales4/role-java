@@ -1,3 +1,2 @@
 ---
-- import_tasks: java-repository.yml
 - import_tasks: java-install.yml
