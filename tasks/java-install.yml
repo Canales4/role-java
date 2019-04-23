@@ -1,9 +1,16 @@
-- name: Añadimos repositorios de Java
+- name: Instalando add-apt-repostory
+  become: yes
+  apt: name=software-properties-common state=latest
+- name: añadiendo los repositorios de Java
   become: yes
   apt_repository: repo='ppa:webupd8team/java'
-- name: Aceptamos Licencias de Java 8
+- name: Acceptando las licencias de Java 8
   become: yes
   debconf: name='oracle-java8-installer' question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
-- name: Instalando Java 8
-  apt: name=oracle-java8-installer state=latest update-cache=yes force=yes
-  sudo: yes
+- name: Intalando Oracle Java 8
+  become: yes
+  apt: name={{item}} state=latest
+  with_items:
+    - oracle-java8-installer
+    - ca-certificates
+    - oracle-java8-set-default
